@@ -22,7 +22,6 @@ import java.util.List;
  * @author：zhixuan.wang
  * @date：2015/10/1 14:51
  */
-@Api(value="/role", tags="权限管理")
 @Controller
 @RequestMapping("/role")
 public class RoleController extends BaseController {
@@ -35,7 +34,6 @@ public class RoleController extends BaseController {
      *
      * @return
      */
-    @ApiOperation(value="权限管理页", notes="", httpMethod = "GET")
     @RequestMapping(value={""}, method= RequestMethod.GET)
     @GetMapping("/manager")
     public String manager() {
@@ -51,13 +49,6 @@ public class RoleController extends BaseController {
      * @param order
      * @return
      */
-    @ApiOperation(value="权限列表", notes="权限列表", httpMethod = "POST")
-    @ApiImplicitParams({
-        @ApiImplicitParam(paramType="body", name = "page", value = "第几页", required = true, dataType = "Integer"),
-        @ApiImplicitParam(paramType="body", name = "rows", value = "单页条数", required = true, dataType = "String"),
-        @ApiImplicitParam(paramType="body", name = "sort", value = "正序/倒序", required = true, dataType = "String"),
-        @ApiImplicitParam(paramType="body", name = "order", value = "排序字段", required = true, dataType = "String")
-    })
     @RequestMapping(value = "/dataGrid",method = RequestMethod.POST)
     @PostMapping("/dataGrid")
     @ResponseBody
