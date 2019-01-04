@@ -100,7 +100,7 @@ public class MysqlGenerator {
 		// 包配置
 		PackageConfig pc = new PackageConfig();
 		pc.setModuleName(null);  //所属模块
-		pc.setParent("com.wangzhixuan"); // 自定义包路径
+		pc.setParent("com.fengluochuni"); // 自定义包路径
 		pc.setController("controller"); // 这里是控制器包名，默认 web
 		pc.setEntity("model");
 		pc.setXml("sqlMapperXml");

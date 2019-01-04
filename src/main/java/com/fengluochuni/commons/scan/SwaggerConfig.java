@@ -27,14 +27,13 @@ public class SwaggerConfig {
                 .build();
     }
 
-    protected ApiInfo getApiInfo()
-    {
+    protected ApiInfo getApiInfo(){
         return new ApiInfo(
-                "Rest Web Service",
-                "cxhc Rest Web Service " + new Date(),
+                "SpringMVC脚手架项目",
+                "SpringMVC脚手架项目",
                 "0.0.1",
                 "",
-                new Contact("cxhc", "", ""),
+                new Contact("徐榕生", "", ""),
                 "",
                 "",
                 new ArrayList<VendorExtension>()

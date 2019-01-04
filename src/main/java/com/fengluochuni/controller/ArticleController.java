@@ -1,6 +1,9 @@
 package com.fengluochuni.controller;
 
 import com.fengluochuni.commons.result.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author zhixuan.wang
  * @since 2017-04-26
  */
+@Api(value="/article", tags="前端控制器")
 @Controller
 @RequestMapping("/article")
 public class ArticleController {
@@ -26,6 +30,7 @@ public class ArticleController {
      * 毕竟管理平台几乎都是内网
      * 
      */
+    @ApiOperation(value="创建文章", notes="", httpMethod = "GET")
     @GetMapping("create")
     public String create() {
         return "admin/article/create";
@@ -35,6 +40,8 @@ public class ArticleController {
      * 保存文章
      * @param content 文章内容
      */
+    @ApiOperation(value="保存文章", notes="", httpMethod = "POST")
+    @ApiImplicitParam(paramType="body", name = "content", value = "文章内容", required = true, dataType = "String")
     @PostMapping("save")
     @ResponseBody
     public Result save(String content) {

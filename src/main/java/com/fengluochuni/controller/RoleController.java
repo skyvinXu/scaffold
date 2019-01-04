@@ -35,7 +35,7 @@ public class RoleController extends BaseController {
      *
      * @return
      */
-    @ApiOperation(value="权限管理页", notes="")
+    @ApiOperation(value="权限管理页", notes="", httpMethod = "GET")
     @RequestMapping(value={""}, method= RequestMethod.GET)
     @GetMapping("/manager")
     public String manager() {
@@ -51,7 +51,7 @@ public class RoleController extends BaseController {
      * @param order
      * @return
      */
-    @ApiOperation(value="权限列表", notes="权限列表")
+    @ApiOperation(value="权限列表", notes="权限列表", httpMethod = "POST")
     @ApiImplicitParams({
         @ApiImplicitParam(paramType="body", name = "page", value = "第几页", required = true, dataType = "Integer"),
         @ApiImplicitParam(paramType="body", name = "rows", value = "单页条数", required = true, dataType = "String"),
