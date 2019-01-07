@@ -9,6 +9,7 @@ import com.fengluochuni.commons.utils.StringEscapeEditor;
 import com.fengluochuni.commons.utils.URLUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.poi.ss.formula.functions.T;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.core.io.FileSystemResource;
@@ -120,6 +121,16 @@ public abstract class BaseController {
     public <T> Page<T> getPage(int current, int size, String sort, String order){
         Page<T> page = new Page<T>(current, size, sort);
         if ("desc".equals(order)) {
+            page.setAsc(false);
+        } else {
+            page.setAsc(true);
+        }
+        return page;
+    }
+
+    public <T> Page<T> getPage(PageInfo pageInfo){
+        Page<T> page = new Page<T>(pageInfo.getNowpage(), pageInfo.getPagesize(), pageInfo.getSort());
+        if ("desc".equals(pageInfo.getOrder())) {
             page.setAsc(false);
         } else {
             page.setAsc(true);

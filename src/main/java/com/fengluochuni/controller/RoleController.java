@@ -34,7 +34,6 @@ public class RoleController extends BaseController {
      *
      * @return
      */
-    @RequestMapping(value={""}, method= RequestMethod.GET)
     @GetMapping("/manager")
     public String manager() {
         return "admin/role/role";

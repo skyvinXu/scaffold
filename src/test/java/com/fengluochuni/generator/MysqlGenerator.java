@@ -38,7 +38,7 @@ public class MysqlGenerator {
 		Properties props = getProperties();
 		AutoGenerator mpg = new AutoGenerator();
 
-		String outputDir = "/Users/lcm/Desktop/generator/code";
+		String outputDir = "D:/BaiduNetdiskDownload/gencode";
 		final String viewOutputDir = outputDir + "/view/";
 		
 		// 全局配置
@@ -49,7 +49,7 @@ public class MysqlGenerator {
 		gc.setEnableCache(false);// XML 二级缓存
 		gc.setBaseResultMap(true);// XML ResultMap
 		gc.setBaseColumnList(false);// XML columList
-		gc.setAuthor("zhixuan.wang");
+		gc.setAuthor("rongsheng.xu");
 
 		// 自定义文件命名，注意 %s 会自动填充表实体属性！
 		gc.setMapperName("%sMapper");
