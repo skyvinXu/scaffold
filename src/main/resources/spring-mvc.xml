@@ -32,8 +32,6 @@
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" cache-period="31556926"/>
     <mvc:resources mapping="/v2/**" location="classpath:/META-INF/resources/" cache-period="31556926"/>
 
-    <!--<mvc:resources mapping="/favicon.ico" location="/static/style/images/favicon.ico" cache-period="31556926"/>-->
-    
     <mvc:annotation-driven>
         <mvc:message-converters register-defaults="false">
             <!-- 将StringHttpMessageConverter的默认编码设为UTF-8 -->

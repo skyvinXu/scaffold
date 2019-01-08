@@ -76,7 +76,7 @@ public class ResourceController extends BaseController {
      * @param resource
      * @return
      */
-    @RequestMapping("/add")
+    @PostMapping("/add")
     @ResponseBody
     public Object add(@Valid Resource resource) {
         resource.setCreateTime(new Date());
@@ -92,7 +92,7 @@ public class ResourceController extends BaseController {
     /**
      * 查询所有的菜单
      */
-    @RequestMapping("/allTree")
+    @PostMapping("/allTree")
     @ResponseBody
     public Object allMenu() {
         return resourceService.selectAllMenu();
@@ -101,7 +101,7 @@ public class ResourceController extends BaseController {
     /**
      * 查询所有的资源tree
      */
-    @RequestMapping("/allTrees")
+    @PostMapping("/allTrees")
     @ResponseBody
     public Object allTree() {
         return resourceService.selectAllTree();
@@ -114,7 +114,7 @@ public class ResourceController extends BaseController {
      * @param id
      * @return
      */
-    @RequestMapping("/editPage")
+    @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
         Resource resource = resourceService.selectById(id);
         model.addAttribute("resource", resource);
@@ -127,7 +127,7 @@ public class ResourceController extends BaseController {
      * @param resource
      * @return
      */
-    @RequestMapping("/edit")
+    @PostMapping("/edit")
     @ResponseBody
     public Object edit(@Valid Resource resource) {
         resourceService.updateById(resource);
@@ -140,7 +140,7 @@ public class ResourceController extends BaseController {
      * @param id
      * @return
      */
-    @RequestMapping("/delete")
+    @PostMapping("/delete")
     @ResponseBody
     public Object delete(Long id) {
         resourceService.deleteById(id);

@@ -19,8 +19,9 @@ import java.util.Date;
 public class SwaggerConfig {
 
     @Bean
-    public Docket demoApi() {
+    public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(true)
                 .apiInfo(getApiInfo()).select()
                 .apis(RequestHandlerSelectors.basePackage("com.fengluochuni.controller"))
                 .paths(PathSelectors.any())

@@ -45,7 +45,7 @@ public class CommonsController {
     /**
      * ueditor编辑器
      */
-    @RequestMapping("ueditor")
+    @GetMapping("ueditor")
     public ResponseEntity<String> ueditor(HttpServletRequest request) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.TEXT_HTML);

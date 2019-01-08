@@ -48,7 +48,6 @@ public class RoleController extends BaseController {
      * @param order
      * @return
      */
-    @RequestMapping(value = "/dataGrid",method = RequestMethod.POST)
     @PostMapping("/dataGrid")
     @ResponseBody
     public Object dataGrid(Integer page, Integer rows, String sort, String order) {
@@ -97,7 +96,7 @@ public class RoleController extends BaseController {
      * @param id
      * @return
      */
-    @RequestMapping("/delete")
+    @PostMapping("/delete")
     @ResponseBody
     public Object delete(Long id) {
         roleService.deleteById(id);
@@ -111,7 +110,7 @@ public class RoleController extends BaseController {
      * @param id
      * @return
      */
-    @RequestMapping("/editPage")
+    @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
         Role role = roleService.selectById(id);
         model.addAttribute("role", role);
@@ -124,7 +123,7 @@ public class RoleController extends BaseController {
      * @param role
      * @return
      */
-    @RequestMapping("/edit")
+    @PostMapping("/edit")
     @ResponseBody
     public Object edit(@Valid Role role) {
         roleService.updateById(role);
@@ -150,7 +149,7 @@ public class RoleController extends BaseController {
      * @param id
      * @return
      */
-    @RequestMapping("/findResourceIdListByRoleId")
+    @PostMapping("/findResourceIdListByRoleId")
     @ResponseBody
     public Object findResourceByRoleId(Long id) {
         List<Long> resources = roleService.selectResourceIdListByRoleId(id);
@@ -165,7 +164,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @RequiresRoles("admin")
-    @RequestMapping("/grant")
+    @PostMapping("/grant")
     @ResponseBody
     public Object grant(Long id, String resourceIds) {
         roleService.updateRoleResource(id, resourceIds);

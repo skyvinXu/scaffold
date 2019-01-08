@@ -52,7 +52,7 @@ public class OrganizationController extends BaseController {
      *
      * @return
      */
-    @RequestMapping("/treeGrid")
+    @PostMapping("/treeGrid")
     @ResponseBody
     public Object treeGrid() {
         return organizationService.selectTreeGrid();
@@ -63,7 +63,7 @@ public class OrganizationController extends BaseController {
      *
      * @return
      */
-    @RequestMapping("/addPage")
+    @GetMapping("/addPage")
     public String addPage() {
         return "admin/organization/organizationAdd";
     }
@@ -74,7 +74,7 @@ public class OrganizationController extends BaseController {
      * @param organization
      * @return
      */
-    @RequestMapping("/add")
+    @PostMapping("/add")
     @ResponseBody
     public Object add(@Valid Organization organization) {
         organization.setCreateTime(new Date());
@@ -85,7 +85,6 @@ public class OrganizationController extends BaseController {
     /**
      * 编辑部门页
      *
-     * @param request
      * @param id
      * @return
      */
@@ -102,7 +101,7 @@ public class OrganizationController extends BaseController {
      * @param organization
      * @return
      */
-    @RequestMapping("/edit")
+    @PostMapping("/edit")
     @ResponseBody
     public Object edit(@Valid Organization organization) {
         organizationService.updateById(organization);
@@ -115,7 +114,7 @@ public class OrganizationController extends BaseController {
      * @param id
      * @return
      */
-    @RequestMapping("/delete")
+    @PostMapping("/delete")
     @ResponseBody
     public Object delete(Long id) {
         organizationService.deleteById(id);
