@@ -16,7 +16,7 @@
     <mvc:annotation-driven/>
     <!-- aspectj aop启用CGliB代理 -->
     <aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true"/>
-    <context:component-scan base-package="com.fengluochuni.controller;com.fengluochuni.commons.scan"/>
+    <context:component-scan base-package="com.fengluochuni.scaffold.controller;com.fengluochuni.scaffold.commons.scan"/>
     
     <!-- 配置结果页面 前缀和后缀 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>如梦技术-主页</title>
+    <title>风落春泥-后台管理系统</title>
     <%@ include file="/commons/basejs.jsp" %>
     <link rel="stylesheet" type="text/css" href="${staticPath }/static/style/css/main.css?v=${version}">
     <script type="text/javascript" src="${staticPath }/static/js/main.js?v=${version}"></script>
@@ -17,7 +17,7 @@
             <div class="head">
                 <table>
                     <tr>
-                        <td width="50%" style="font-size: 14px;">如梦技术</td>
+                        <td width="50%" style="font-size: 14px;">风落春泥-后台管理系统</td>
                         <td width="50%" align="right" style="font-size: 12px;">
                             <div class="easyui-panel rtool" data-options="border:false" style="text-align: right; background: #09C; color: white; margin-top: -1px;">
                                 <a href="#" class="easyui-menubutton" data-options="menu:'#mm1'">
