@@ -17,7 +17,7 @@ import java.util.Date;
 /**
  * Swagger配置
  *
- * @author X.rsh
+ * @author rongsheng.xu
  * @since 2019-1-9 17:29:43
  */
 @Configuration

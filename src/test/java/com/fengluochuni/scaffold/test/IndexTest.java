@@ -1,5 +1,6 @@
 package com.fengluochuni.scaffold.test;
 
+import com.fengluochuni.scaffold.generator.MysqlGenerator;
 import com.fengluochuni.scaffold.test.base.BaseTest;
 import org.junit.Test;
 import org.springframework.http.MediaType;
