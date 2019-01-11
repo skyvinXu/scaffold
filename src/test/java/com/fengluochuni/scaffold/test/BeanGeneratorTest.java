@@ -3,10 +3,11 @@ package com.fengluochuni.scaffold.test;
 import com.fengluochuni.scaffold.commons.utils.BeanProperty;
 import com.fengluochuni.scaffold.commons.utils.BeanUtils;
 import com.fengluochuni.scaffold.commons.utils.JsonUtils;
-import com.fengluochuni.scaffold.model.auth.User;
+import com.fengluochuni.scaffold.modules.auth.model.User;
 
 /**
  * cglib生成bean，给bean动态添加字段
+ *
  * @author L.cm
  */
 public class BeanGeneratorTest {

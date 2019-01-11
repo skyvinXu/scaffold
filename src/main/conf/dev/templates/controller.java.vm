@@ -49,7 +49,8 @@ public class ${table.controllerName} {
     
     /**
      * 添加页面
-     * @return
+     *
+     * @return 页面路径
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -58,8 +59,9 @@ public class ${table.controllerName} {
     
     /**
      * 添加
-     * @param 
-     * @return
+     *
+     * @param ${table.entityPath}
+     * @return 操作结果Json
      */
     @PostMapping("/add")
     @ResponseBody
@@ -77,8 +79,9 @@ public class ${table.controllerName} {
     
     /**
      * 删除
+     *
      * @param id
-     * @return
+     * @return 操作结果Json
      */
     @PostMapping("/delete")
     @ResponseBody
@@ -97,9 +100,10 @@ public class ${table.controllerName} {
     
     /**
      * 编辑
+     *
      * @param model
      * @param id
-     * @return
+     * @return 页面路径
      */
     @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
@@ -110,8 +114,9 @@ public class ${table.controllerName} {
     
     /**
      * 编辑
-     * @param 
-     * @return
+     *
+     * @param ${table.entityPath}
+     * @return 操作结果Json
      */
     @PostMapping("/edit")
     @ResponseBody

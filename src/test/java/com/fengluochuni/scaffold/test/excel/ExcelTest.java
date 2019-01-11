@@ -8,8 +8,10 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by chunmeng.lu
- * Date: 2016-20-04 10:42
+ * Excel测试
+ *
+ * @author chunmeng.lu
+ * @since 2016-02-04 10:42
  */
 public class ExcelTest {
 

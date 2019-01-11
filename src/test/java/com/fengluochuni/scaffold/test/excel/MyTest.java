@@ -5,6 +5,12 @@ import com.fengluochuni.scaffold.commons.report.excel.ExcelField;
 
 import java.util.Date;
 
+/**
+ * 我的Excel测试
+ *
+ * @author chunmeng.lu
+ * @since 2016-02-04 10:42
+ */
 public class MyTest {
 
 	@ExcelField("名称")

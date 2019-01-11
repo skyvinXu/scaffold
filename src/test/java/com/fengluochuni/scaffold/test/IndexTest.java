@@ -10,12 +10,15 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
 /**
  * 首页测试
+ *
+ * @author chunmeng.lu
  */
 public class IndexTest extends BaseTest {
 
 	/**
-	 * 参考链接：Spring MVC测试框架详解——服务端测试
-	 * <URL>http://jinnianshilongnian.iteye.com/blog/2004660</URL>
+	 * 首页测试
+     *
+     * @see <a href="http://jinnianshilongnian.iteye.com/blog/2004660">Spring MVC测试框架详解——服务端测试</a>
 	 */
 	@Test
 	public void index() throws Exception {

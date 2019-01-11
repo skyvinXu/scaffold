@@ -17,6 +17,11 @@ import java.nio.file.Paths;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
+/**
+ * Swagger2测试
+ *
+ * @author rongsheng.xu
+ */
 public class Swagger2Tests extends BaseTest {
 
     @Autowired

@@ -71,7 +71,7 @@ public class ShiroUser implements Serializable {
     }
 
     /**
-     * 本函数输出将作为默认的<shiro:principal/>输出.
+     * 本函数输出将作为默认的 shiro:principal 输出.
      */
     @Override
     public String toString() {

@@ -26,20 +26,26 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
+        String basePackagePrefix = "com.fengluochuni.scaffold.modules";
+        String basePackageContains = ".controller";
         return new Docket(DocumentationType.SWAGGER_2)
                 .enable(true)
                 .apiInfo(getApiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.fengluochuni.scaffold.controller"))
+                //.apis(RequestHandlerSelectors.basePackage("com.fengluochuni.scaffold.modules.**.controller"))
+                .apis(requestHandler -> {
+                    String packageName = requestHandler.declaringClass().getPackage().getName();
+                    return packageName.startsWith(basePackagePrefix) && packageName.contains(basePackageContains);
+                })
                 .paths(PathSelectors.any())
                 .build();
     }
 
-    protected ApiInfo getApiInfo(){
+    private ApiInfo getApiInfo(){
         return new ApiInfo(
                 "SpringMVC脚手架项目",
                 "SpringMVC脚手架项目",
                 "0.0.1",
-                "",
+                "www.fengluochuni.com",
                 new Contact("徐榕生", "www.fengluochuni.com", "my_love_java_xu@163.com"),
                 "MIT License",
                 "https://opensource.org/licenses/mit-license.html",

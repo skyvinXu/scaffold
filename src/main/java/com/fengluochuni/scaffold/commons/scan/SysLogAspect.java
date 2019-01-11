@@ -1,8 +1,8 @@
 package com.fengluochuni.scaffold.commons.scan;
 
 import com.fengluochuni.scaffold.commons.utils.StringUtils;
-import com.fengluochuni.scaffold.model.system.SysLog;
-import com.fengluochuni.scaffold.service.system.ISysLogService;
+import com.fengluochuni.scaffold.modules.system.model.SysLog;
+import com.fengluochuni.scaffold.modules.system.service.ISysLogService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.shiro.SecurityUtils;

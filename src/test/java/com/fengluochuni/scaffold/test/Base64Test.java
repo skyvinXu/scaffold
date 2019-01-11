@@ -5,6 +5,12 @@ import org.springframework.util.Base64Utils;
 
 import java.util.Arrays;
 
+/**
+ * Base64测试
+ *
+ * @author chunmeng.lu
+ * @since 2016-02-04 10:42
+ */
 public class Base64Test {
 
     /**

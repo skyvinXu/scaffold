@@ -1,6 +1,6 @@
 package com.fengluochuni.scaffold.task;
 
-import com.fengluochuni.scaffold.service.test.impl.TestService;
+import com.fengluochuni.scaffold.modules.test.service.impl.TestService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

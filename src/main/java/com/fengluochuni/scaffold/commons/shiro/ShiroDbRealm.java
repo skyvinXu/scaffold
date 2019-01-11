@@ -1,9 +1,9 @@
 package com.fengluochuni.scaffold.commons.shiro;
 
-import com.fengluochuni.scaffold.model.auth.User;
-import com.fengluochuni.scaffold.model.vo.UserVo;
-import com.fengluochuni.scaffold.service.auth.IRoleService;
-import com.fengluochuni.scaffold.service.auth.IUserService;
+import com.fengluochuni.scaffold.modules.auth.model.User;
+import com.fengluochuni.scaffold.modules.auth.model.vo.UserVo;
+import com.fengluochuni.scaffold.modules.auth.service.IRoleService;
+import com.fengluochuni.scaffold.modules.auth.service.IUserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.shiro.authc.*;

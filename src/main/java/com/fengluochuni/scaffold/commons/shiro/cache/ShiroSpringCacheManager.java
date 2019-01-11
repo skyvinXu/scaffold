@@ -30,8 +30,9 @@ import org.apache.shiro.util.Destroyable;
 import org.springframework.util.ClassUtils;
 
 /**
- * 使用spring-cache作为shiro缓存
  * 缓存管理器
+ *
+ * <p>使用spring-cache作为shiro缓存</p>
  *
  * @author L.cm
  *

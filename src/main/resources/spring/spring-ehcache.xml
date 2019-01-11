@@ -6,7 +6,8 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/cache
        http://www.springframework.org/schema/cache/spring-cache.xsd">
-    <!-- Spring提供的基于的Ehcache实现的缓存管理器 -->
+
+    <description>Ehcache缓存配置</description>
     
     <!-- 如果有多个ehcacheManager要在bean加上p:shared="true" -->
     <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">

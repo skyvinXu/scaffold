@@ -15,6 +15,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 /**
  * 通用测试类
+ *
  * @author L.cm
  */
 @RunWith(SpringJUnit4ClassRunner.class)

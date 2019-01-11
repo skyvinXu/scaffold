@@ -13,8 +13,6 @@ import java.util.Map;
  * 基于CGlib
  * 实体工具类，目前copy不支持map、list
  * @author L.cm
- * @email 596392912@qq.com
- * @site http://www.dreamlu.net
  * @since 2015年4月26日下午5:10:42
  */
 public final class BeanUtils extends org.springframework.beans.BeanUtils {

@@ -9,7 +9,6 @@
        http://www.springframework.org/schema/cache
        http://www.springframework.org/schema/cache/spring-cache.xsd">
 
-    <!-- 以前项目中的配置，注意需要添加Spring Data Redis等jar包 -->
     <description>redis配置</description>
 
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
