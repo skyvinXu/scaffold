@@ -51,6 +51,11 @@ public class LoginController extends BaseController {
         return "index";
     }
 
+    @GetMapping("/welcome")
+    public String welcome(Model model) {
+        return "welcome";
+    }
+
     /**
      * GET 登录
      * @return {String}

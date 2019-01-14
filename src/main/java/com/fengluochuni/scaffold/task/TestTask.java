@@ -21,11 +21,13 @@ import java.util.concurrent.Callable;
 public class TestTask {
 	protected Logger logger = LogManager.getLogger(getClass());
 	
-	@Autowired private CacheManager cacheManager;
-	@Autowired private TestService testService;
+	@Autowired
+    private CacheManager cacheManager;
+	@Autowired
+    private TestService testService;
 //	@Autowired private RedisTemplate<String, Object> redisTemplate;
 	
-	@Scheduled(cron = "0 5/20 * * * ?")
+	@Scheduled(cron = "0 30 * * * ?")
 	public void cronTest() {
 		// 测试手动存储cache
 		Cache cache = cacheManager.getCache("hour");
@@ -45,7 +47,7 @@ public class TestTask {
 		testService.selectById(1L);
 		testService.selectById(1L);
 		
-		logger.debug(xx);
+		//logger.debug(xx);
 		logger.debug(new Date());
 	}
 }
