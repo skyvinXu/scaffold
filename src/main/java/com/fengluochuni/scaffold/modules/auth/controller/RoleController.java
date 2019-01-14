@@ -29,7 +29,7 @@ public class RoleController extends BaseController {
     /**
      * 角色管理页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/manager")
     public String manager() {
@@ -39,11 +39,11 @@ public class RoleController extends BaseController {
     /**
      * 角色列表
      *
-     * @param page
-     * @param rows
-     * @param sort
-     * @param order
-     * @return
+     * @param page  页数
+     * @param rows  每页条数
+     * @param sort  排序字段
+     * @param order 排序关键字
+     * @return  操作结果Json
      */
     @PostMapping("/dataGrid")
     @ResponseBody
@@ -56,7 +56,7 @@ public class RoleController extends BaseController {
     /**
      * 角色树
      *
-     * @return
+     * @return  操作结果Json
      */
     @PostMapping("/tree")
     @ResponseBody
@@ -67,7 +67,7 @@ public class RoleController extends BaseController {
     /**
      * 添加角色页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -77,8 +77,8 @@ public class RoleController extends BaseController {
     /**
      * 添加权限
      *
-     * @param role
-     * @return
+     * @param role  {Role}
+     * @return  操作结果Json
      */
     @PostMapping("/add")
     @ResponseBody
@@ -90,8 +90,8 @@ public class RoleController extends BaseController {
     /**
      * 删除权限
      *
-     * @param id
-     * @return
+     * @param id    记录ID
+     * @return  操作结果Json
      */
     @PostMapping("/delete")
     @ResponseBody
@@ -103,9 +103,9 @@ public class RoleController extends BaseController {
     /**
      * 编辑权限页
      *
-     * @param model
-     * @param id
-     * @return
+     * @param model {Model}
+     * @param id    记录ID
+     * @return  页面路径
      */
     @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
@@ -117,8 +117,8 @@ public class RoleController extends BaseController {
     /**
      * 删除权限
      *
-     * @param role
-     * @return
+     * @param role  {Role}
+     * @return  操作结果Json
      */
     @PostMapping("/edit")
     @ResponseBody
@@ -130,9 +130,9 @@ public class RoleController extends BaseController {
     /**
      * 授权页面
      *
-     * @param id
-     * @param model
-     * @return
+     * @param id    记录ID
+     * @param model {Model}
+     * @return  页面路径
      */
     @GetMapping("/grantPage")
     public String grantPage(Model model, Long id) {
@@ -143,8 +143,8 @@ public class RoleController extends BaseController {
     /**
      * 授权页面页面根据角色查询资源
      *
-     * @param id
-     * @return
+     * @param id    记录ID
+     * @return  操作结果Json
      */
     @PostMapping("/findResourceIdListByRoleId")
     @ResponseBody
@@ -156,9 +156,9 @@ public class RoleController extends BaseController {
     /**
      * 授权
      *
-     * @param id
-     * @param resourceIds
-     * @return
+     * @param id    记录ID
+     * @param resourceIds   授权资源ID列表
+     * @return  操作结果Json
      */
     @RequiresRoles("admin")
     @PostMapping("/grant")

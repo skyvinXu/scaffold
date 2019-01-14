@@ -16,7 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 public class WebUtils extends org.springframework.web.util.WebUtils {
 	/**
 	 * 判断是否ajax请求
-	 * spring ajax 返回含有 ResponseBody 或者 RestController注解
+     *
+	 * <p>spring ajax 返回含有 ResponseBody 或者 RestController注解</p>
+     *
 	 * @param handlerMethod HandlerMethod
 	 * @return 是否ajax请求
 	 */
@@ -34,32 +36,35 @@ public class WebUtils extends org.springframework.web.util.WebUtils {
 		return false;
 	}
 
-	/**
-	 * 读取cookie
-	 * @param request
-	 * @param name
-	 * @return
-	 */
+    /**
+     * 读取Cookie
+     *
+     * @param request   HttpServletRequest
+     * @param name  Cookie名称
+     * @return  Cookie的值
+     */
 	public static String getCookieValue(HttpServletRequest request, String name) {
 		Cookie cookie = getCookie(request, name);
 		return cookie != null ? cookie.getValue() : null;
 	}
 
 	/**
-	 * 清除 某个指定的cookie 
-	 * @param response
-	 * @param key
+	 * 清除 某个指定的Cookie
+     *
+	 * @param response  HttpServletResponse
+	 * @param key   Cookie名称
 	 */
 	public static void removeCookie(HttpServletResponse response, String key) {
 		setCookie(response, key, null, 0);
 	}
 
 	/**
-	 * 设置cookie
-	 * @param response
-	 * @param name
-	 * @param value
-	 * @param maxAgeInSeconds
+	 * 设置Cookie
+     *
+	 * @param response  HttpServletResponse
+	 * @param name  Cookie名称
+	 * @param value Cookie的值
+	 * @param maxAgeInSeconds   最大存活时间
 	 */
 	public static void setCookie(HttpServletResponse response, String name, String value, int maxAgeInSeconds) {
 		Cookie cookie = new Cookie(name, value);

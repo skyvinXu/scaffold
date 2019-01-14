@@ -32,6 +32,8 @@ public class MysqlGenerator {
     private final static String OUTPUT_DIR_PATH = "D:/BaiduNetdiskDownload/gencode";
     /** 生成前端JSP页面目录 */
     private final static String VIEW_OUTPUT_DIR_PATH = OUTPUT_DIR_PATH + "/view/";
+    /** 生成Mapper文件目录 */
+    //private final static String MAPPER_OUTPUT_DIR_PATH = OUTPUT_DIR_PATH + "/sqlMapperXml/";
     /* 获取 JDBC 配置文件 */
     private final Properties props = getProperties();
 
@@ -39,6 +41,8 @@ public class MysqlGenerator {
 
     /**
      * MySQL 生成演示
+     *
+     * @param args  参数
      */
     public static void main(String[] args) {
         MysqlGenerator mysqlGenerator = new MysqlGenerator();
@@ -129,10 +133,10 @@ public class MysqlGenerator {
         StrategyConfig strategy = new StrategyConfig();
         // strategy.setCapitalMode(true);// 全局大写命名
         // strategy.setDbColumnUnderline(true);//全局下划线命名
-//		strategy.setTablePrefix(new String[] { "bmd_", "mp_" });// 此处可以修改为您的表前缀
+		strategy.setTablePrefix(new String[] { "test_"});// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
 
-        strategy.setInclude(new String[] { "temp_ywy_match" }); // 需要生成的表
+        strategy.setInclude(new String[] { "test_employee" }); // 需要生成的表
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
 
         // 自定义实体父类
@@ -149,7 +153,7 @@ public class MysqlGenerator {
         // strategy.setSuperServiceImplClass("com.baomidou.demo.TestServiceImpl");
 
         // 自定义 controller 父类
-        strategy.setSuperControllerClass("BaseController");
+        strategy.setSuperControllerClass("com.fengluochuni.scaffold.commons.base.BaseController");
         // 【实体】是否生成字段常量（默认 false）
         // public static final String ID = "test_id";
         // strategy.setEntityColumnConstant(true);
@@ -166,7 +170,7 @@ public class MysqlGenerator {
     private PackageConfig buildPackageConfig(){
         PackageConfig pc = new PackageConfig();
         pc.setModuleName("test"); //所属模块
-        pc.setParent("com.fengluochuni.scffold"); // 自定义包路径
+        pc.setParent("com.fengluochuni.scaffold.modules"); // 自定义包路径
         pc.setController("controller"); // 这里是控制器包名，默认 web
         pc.setEntity("model");
         pc.setXml("sqlMapperXml");

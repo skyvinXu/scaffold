@@ -30,7 +30,7 @@ public class OrganizationController extends BaseController {
     /**
      * 部门管理主页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping(value = "/manager")
     public String manager() {
@@ -40,7 +40,7 @@ public class OrganizationController extends BaseController {
     /**
      * 部门资源树
      *
-     * @return
+     * @return  操作结果Json
      */
     @PostMapping(value = "/tree")
     @ResponseBody
@@ -51,7 +51,7 @@ public class OrganizationController extends BaseController {
     /**
      * 部门列表
      *
-     * @return
+     * @return  操作结果Json
      */
     @PostMapping("/treeGrid")
     @ResponseBody
@@ -62,7 +62,7 @@ public class OrganizationController extends BaseController {
     /**
      * 添加部门页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -72,8 +72,8 @@ public class OrganizationController extends BaseController {
     /**
      * 添加部门
      *
-     * @param organization
-     * @return
+     * @param organization  {Organization}
+     * @return  操作结果Json
      */
     @PostMapping("/add")
     @ResponseBody
@@ -86,8 +86,9 @@ public class OrganizationController extends BaseController {
     /**
      * 编辑部门页
      *
-     * @param id
-     * @return
+     * @param model {Model}
+     * @param id    操作ID
+     * @return  页面路径
      */
     @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
@@ -99,8 +100,8 @@ public class OrganizationController extends BaseController {
     /**
      * 编辑部门
      *
-     * @param organization
-     * @return
+     * @param organization  {Organization}
+     * @return  操作结果Json
      */
     @PostMapping("/edit")
     @ResponseBody
@@ -112,8 +113,8 @@ public class OrganizationController extends BaseController {
     /**
      * 删除部门
      *
-     * @param id
-     * @return
+     * @param id    记录ID
+     * @return  操作结果Json
      */
     @PostMapping("/delete")
     @ResponseBody

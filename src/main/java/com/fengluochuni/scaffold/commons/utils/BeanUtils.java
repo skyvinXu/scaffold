@@ -18,21 +18,24 @@ import java.util.Map;
 public final class BeanUtils extends org.springframework.beans.BeanUtils {
 	private BeanUtils(){}
 
-	/**
-	 * 实例化对象
-	 * @param clazz 类
-	 * @return 对象
-	 */
-	@SuppressWarnings("unchecked")
+    /**
+     * 实例化对象
+     *
+     * @param clazz 加载器类
+     * @param <T>   类
+     * @return  类
+     */
 	public static <T> T newInstance(Class<?> clazz) {
 		return (T) instantiate(clazz);
 	}
 
-	/**
-	 * 实例化对象
-	 * @param clazzStr 类名
-	 * @return 对象
-	 */
+    /**
+     * 实例化对象
+     *
+     * @param clazzStr  类名
+     * @param <T>   类
+     * @return  类
+     */
 	public static <T> T newInstance(String clazzStr) {
 		try {
 			Class<?> clazz = Class.forName(clazzStr);
@@ -44,6 +47,7 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 
 	/**
 	 * 获取Bean的属性
+     *
 	 * @param bean bean
 	 * @param propertyName 属性名
 	 * @return 属性值
@@ -69,6 +73,7 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 	
 	/**
 	 * 设置Bean属性
+     *
 	 * @param bean bean
 	 * @param propertyName 属性名
 	 * @param value 属性值
@@ -94,6 +99,7 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 	
 	/**
 	 * 给一个Bean添加字段
+     *
 	 * @param superBean 父级Bean
 	 * @param props 新增属性
 	 * @return  {Object}
@@ -104,13 +110,14 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 		BeanUtils.copy(superBean, genBean);
 		return genBean;
 	}
-	
-	/**
-	 * 给一个class添加字段
-	 * @param superclass 父级
-	 * @param props 新增属性
-	 * @return {Object}
-	 */
+
+    /**
+     * 给一个class添加字段
+     *
+     * @param superclass    父级
+     * @param props 新增属性
+     * @return  {Object}
+     */
 	public static Object generator(Class<?> superclass, BeanProperty... props) {
 		BeanGenerator generator = new BeanGenerator();
 		generator.setSuperclass(superclass);
@@ -120,13 +127,15 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 		}
 		return generator.create();
 	}
-	
-	/**
-	 * copy 对象属性到另一个对象，默认不使用Convert
-	 * @param src
-	 * @param clazz 类名
-	 * @return T
-	 */
+
+    /**
+     * copy 对象属性到另一个对象，默认不使用Convert
+     *
+     * @param src   原始类
+     * @param clazz 加载器类
+     * @param <T>   类型
+     * @return  类
+     */
 	public static <T> T copy(Object src, Class<T> clazz) {
 		BeanCopier copier = BeanCopier.create(src.getClass(), clazz, false);
 
@@ -137,6 +146,7 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 
 	/**
 	 * 拷贝对象
+     *
 	 * @param src 源对象
 	 * @param dist 需要赋值的对象
 	 */
@@ -149,17 +159,22 @@ public final class BeanUtils extends org.springframework.beans.BeanUtils {
 
 	/**
 	 * 将对象装成map形式
-	 * @param src
-	 * @return
+     *
+	 * @param src   原Bean类
+	 * @return  Map
 	 */
-	@SuppressWarnings("rawtypes")
 	public static Map toMap(Object src) {
 		return BeanMap.create(src);
 	}
 
-	/**
-	 * 将map 转为 bean
-	 */
+    /**
+     * 将map 转为 bean
+     *
+     * @param beanMap   {Map}
+     * @param valueType 加载类
+     * @param <T>   类
+     * @return  类
+     */
 	public static <T> T toBean(Map<String, Object> beanMap, Class<T> valueType) {
 		T bean = BeanUtils.newInstance(valueType);
 		PropertyDescriptor[] beanPds = getPropertyDescriptors(valueType);

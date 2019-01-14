@@ -23731,7 +23731,7 @@ UE.plugin.register('music', function (){
  * 1.拖放文件到编辑区域，自动上传并插入到选区
  * 2.插入粘贴板的图片，自动上传并插入到选区
  * @author Jinqn
- * @date 2013-10-14
+ * @since 2013-10-14
  */
 UE.plugin.register('autoupload', function (){
 
@@ -24457,7 +24457,7 @@ UE.plugin.register('section', function (){
  * @description
  * 简单上传:点击按钮,直接选择文件上传
  * @author Jinqn
- * @date 2014-03-31
+ * @since 2014-03-31
  */
 UE.plugin.register('simpleupload', function (){
     var me = this,

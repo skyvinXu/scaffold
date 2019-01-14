@@ -150,6 +150,7 @@ public abstract class BaseController {
 	/**
 	 * redirect跳转
 	 * @param url 目标url
+     * @return {String}
 	 */
 	protected String redirect(String url) {
 		return new StringBuilder("redirect:").append(url).toString();
@@ -158,6 +159,7 @@ public abstract class BaseController {
 	/**
 	 * 下载文件
 	 * @param file 文件
+     * @return {ResponseEntity}
 	 */
 	protected ResponseEntity<Resource> download(File file) {
 		String fileName = file.getName();

@@ -51,7 +51,7 @@ public class TempYwyMatchController extends BaseController {
     /**
      * 添加页面
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -61,8 +61,8 @@ public class TempYwyMatchController extends BaseController {
     /**
      * 添加
      *
-     * @param tempYwyMatch
-     * @return
+     * @param tempYwyMatch  {TempYwyMatch}
+     * @return  操作结果Json
      */
     @PostMapping("/add")
     @ResponseBody
@@ -81,7 +81,7 @@ public class TempYwyMatchController extends BaseController {
     /**
      * 删除
      *
-     * @param id
+     * @param id    记录ID
      * @return 操作结果json
      */
     @PostMapping("/delete")
@@ -101,8 +101,9 @@ public class TempYwyMatchController extends BaseController {
     
     /**
      * 编辑
-     * @param model
-     * @param id
+     *
+     * @param model {Model}
+     * @param id    记录ID
      * @return 页面路径
      */
     @GetMapping("/editPage")
@@ -115,8 +116,8 @@ public class TempYwyMatchController extends BaseController {
     /**
      * 编辑
      *
-     * @param tempYwyMatch
-     * @return
+     * @param tempYwyMatch  {TempYwyMatch}
+     * @return  操作结果Json
      */
     @PostMapping("/edit")
     @ResponseBody

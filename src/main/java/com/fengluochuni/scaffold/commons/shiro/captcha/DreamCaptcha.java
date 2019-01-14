@@ -71,10 +71,12 @@ public class DreamCaptcha implements InitializingBean {
 		Assert.hasText(cookieName, "cookieName must not be empty!");
 		this.dreamCaptchaCache = cacheManager.getCache(cacheName);
 	}
-	
-	/**
-	 * 生成验证码
-	 */
+
+    /**
+     * 生成验证码
+     * @param request   HttpServletRequest
+     * @param response  HttpServletResponse
+     */
 	public void generate(HttpServletRequest request, HttpServletResponse response) {
 		// 先检查cookie的uuid是否存在
 		String cookieValue = WebUtils.getCookieValue(request, cookieName);

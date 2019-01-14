@@ -31,7 +31,7 @@ public class ResourceController extends BaseController {
     /**
      * 菜单树
      *
-     * @return
+     * @return  操作结果Json
      */
     @PostMapping("/tree")
     @ResponseBody
@@ -43,7 +43,7 @@ public class ResourceController extends BaseController {
     /**
      * 资源管理页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/manager")
     public String manager() {
@@ -53,7 +53,7 @@ public class ResourceController extends BaseController {
     /**
      * 资源管理列表
      *
-     * @return
+     * @return  操作结果Json
      */
     @PostMapping("/treeGrid")
     @ResponseBody
@@ -64,7 +64,7 @@ public class ResourceController extends BaseController {
     /**
      * 添加资源页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -74,8 +74,8 @@ public class ResourceController extends BaseController {
     /**
      * 添加资源
      *
-     * @param resource
-     * @return
+     * @param resource  {Resource}
+     * @return  操作结果Json
      */
     @PostMapping("/add")
     @ResponseBody
@@ -92,6 +92,8 @@ public class ResourceController extends BaseController {
 
     /**
      * 查询所有的菜单
+     *
+     * @return 操作结果Json
      */
     @PostMapping("/allTree")
     @ResponseBody
@@ -101,6 +103,8 @@ public class ResourceController extends BaseController {
 
     /**
      * 查询所有的资源tree
+     *
+     * @return 操作结果Json
      */
     @PostMapping("/allTrees")
     @ResponseBody
@@ -111,9 +115,9 @@ public class ResourceController extends BaseController {
     /**
      * 编辑资源页
      *
-     * @param model
-     * @param id
-     * @return
+     * @param model {Model}
+     * @param id    记录ID
+     * @return  页面路径
      */
     @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
@@ -125,8 +129,8 @@ public class ResourceController extends BaseController {
     /**
      * 编辑资源
      *
-     * @param resource
-     * @return
+     * @param resource  {Resource}
+     * @return  操作结果Json
      */
     @PostMapping("/edit")
     @ResponseBody
@@ -138,8 +142,8 @@ public class ResourceController extends BaseController {
     /**
      * 删除资源
      *
-     * @param id
-     * @return
+     * @param id    记录ID
+     * @return  操作结果Json
      */
     @PostMapping("/delete")
     @ResponseBody

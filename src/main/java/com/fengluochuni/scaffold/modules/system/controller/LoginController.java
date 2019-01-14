@@ -33,7 +33,7 @@ public class LoginController extends BaseController {
     /**
      * 首页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/")
     public String index() {
@@ -43,14 +43,20 @@ public class LoginController extends BaseController {
     /**
      * 首页
      *
-     * @param model
-     * @return
+     * @param model {Model}
+     * @return  页面路径
      */
     @GetMapping("/index")
     public String index(Model model) {
         return "index";
     }
 
+    /**
+     * 欢迎页
+     *
+     * @param model {Model}
+     * @return  页面路径
+     */
     @GetMapping("/welcome")
     public String welcome(Model model) {
         return "welcome";
@@ -58,7 +64,8 @@ public class LoginController extends BaseController {
 
     /**
      * GET 登录
-     * @return {String}
+     *
+     * @return 页面路径
      */
     @GetMapping("/login")
     public String login() {
@@ -72,9 +79,13 @@ public class LoginController extends BaseController {
     /**
      * POST 登录 shiro 写法
      *
-     * @param username 用户名
-     * @param password 密码
-     * @return {Object}
+     * @param request   {HttpServletRequest}
+     * @param response  {HttpServletResponse}
+     * @param username  用户名
+     * @param password  密码
+     * @param captcha   验证码
+     * @param rememberMe    记住账户
+     * @return  操作结果Json
      */
     @PostMapping("/login")
     @ResponseBody
@@ -115,7 +126,7 @@ public class LoginController extends BaseController {
 
     /**
      * 未授权
-     * @return {String}
+     * @return 页面路径
      */
     @GetMapping("/unauth")
     public String unauth() {
@@ -126,8 +137,9 @@ public class LoginController extends BaseController {
     }
 
     /**
-     * 退出
-     * @return {Result}
+     * 退出登录
+     *
+     * @return 操作结果Json
      */
     @PostMapping("/logout")
     @ResponseBody

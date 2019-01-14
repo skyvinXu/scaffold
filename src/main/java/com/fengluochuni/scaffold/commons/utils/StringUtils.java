@@ -13,8 +13,8 @@ public class StringUtils extends org.springframework.util.StringUtils {
      * Check whether the given {@code CharSequence} contains actual <em>text</em>.
      * <p>More specifically, this method returns {@code true} if the
      * {@code CharSequence} is not {@code null}, its length is greater than
-     * 0, and it contains at least one non-whitespace character.
-     * <p><pre class="code">
+     * 0, and it contains at least one non-whitespace character.</p>
+     * <pre class="code">
      * StringUtils.isBlank(null) = true
      * StringUtils.isBlank("") = true
      * StringUtils.isBlank(" ") = true

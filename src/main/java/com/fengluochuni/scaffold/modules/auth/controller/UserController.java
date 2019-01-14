@@ -41,7 +41,7 @@ public class UserController extends BaseController {
     /**
      * 用户管理页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/manager")
     public String manager() {
@@ -51,12 +51,12 @@ public class UserController extends BaseController {
     /**
      * 用户管理列表
      *
-     * @param userVo
-     * @param page
-     * @param rows
-     * @param sort
-     * @param order
-     * @return
+     * @param userVo    {UserVo}
+     * @param page  页数
+     * @param rows  每页条数
+     * @param sort  排序字段
+     * @param order 排序关键字
+     * @return  操作结果Json
      */
     @PostMapping("/dataGrid")
     @ResponseBody
@@ -84,7 +84,7 @@ public class UserController extends BaseController {
     /**
      * 添加用户页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -94,8 +94,8 @@ public class UserController extends BaseController {
     /**
      * 添加用户
      *
-     * @param userVo
-     * @return
+     * @param userVo {UserVo}
+     * @return  操作结果Json
      */
     @PostMapping("/add")
     @ResponseBody
@@ -115,9 +115,9 @@ public class UserController extends BaseController {
     /**
      * 编辑用户页
      *
-     * @param id
-     * @param model
-     * @return
+     * @param id    记录ID
+     * @param model {Model}
+     * @return  页面路径
      */
     @GetMapping("/editPage")
     public String editPage(Model model, Long id) {
@@ -135,8 +135,8 @@ public class UserController extends BaseController {
     /**
      * 编辑用户
      *
-     * @param userVo
-     * @return
+     * @param userVo    {UserVo}
+     * @return  操作结果Json
      */
     @RequiresRoles("admin")
     @PostMapping("/edit")
@@ -160,7 +160,7 @@ public class UserController extends BaseController {
     /**
      * 修改密码页
      *
-     * @return
+     * @return  页面路径
      */
     @GetMapping("/editPwdPage")
     public String editPwdPage() {
@@ -173,9 +173,9 @@ public class UserController extends BaseController {
     /**
      * 修改密码
      *
-     * @param oldPwd
-     * @param pwd
-     * @return
+     * @param oldPwd    旧密码
+     * @param pwd   新密码
+     * @return  操作结果Json
      */
     @PostMapping("/editUserPwd")
     @ResponseBody
@@ -194,8 +194,8 @@ public class UserController extends BaseController {
     /**
      * 删除用户
      *
-     * @param id
-     * @return
+     * @param id    记录ID
+     * @return  操作结果Json
      */
     @RequiresRoles("admin")
     @PostMapping("/delete")

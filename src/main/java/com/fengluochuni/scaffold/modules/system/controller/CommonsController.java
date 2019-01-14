@@ -27,22 +27,31 @@ public class CommonsController {
     
     /**
      * 图标页
+     *
+     * @return 页面路径
      */
     @GetMapping("icons.html")
     public String icons() {
         return "icons";
     }
-    
+
+
     /**
      * 图形验证码
+     *
+     * @param request   {HttpServletRequest}
+     * @param response  {HttpServletResponse}
      */
     @GetMapping("captcha.jpg")
     public void captcha(HttpServletRequest request, HttpServletResponse response) {
         dreamCaptcha.generate(request, response);
     }
-    
+
     /**
      * ueditor编辑器
+     *
+     * @param request   {HttpServletRequest}
+     * @return  {ResponseEntity}
      */
     @GetMapping("ueditor")
     public ResponseEntity<String> ueditor(HttpServletRequest request) {

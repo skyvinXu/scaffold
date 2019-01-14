@@ -10,10 +10,11 @@ import org.apache.logging.log4j.Logger;
  */
 public class RuntimeUtils {
     private static final Logger logger = LogManager.getLogger(RuntimeUtils.class);
-    
+
     /**
      * 运行shell
-     * @param script
+     *
+     * @param script    Sheell脚本
      */
     public static void runShell(String script) {
         Process process = null;
